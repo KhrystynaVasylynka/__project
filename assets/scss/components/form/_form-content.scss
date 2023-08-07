@@ -29,12 +29,11 @@
     }
     &__input {
       display: block;
-      overflow: visible;
 
       width: 100%;
-      height: $gap-x3;
-      padding-right: $gap-lg;
-      padding-left: $gap-lg;
+      height: 60px;
+      padding-right: 30px;
+      padding-left: 30px;
 
       transition: background-color 0.5s, border-color 0.5s;
       letter-spacing: 0.15em;
@@ -45,15 +44,23 @@
       background-color: rgba(255, 255, 255, 0.05);
 
       font-size: 1.125rem;
+      &::placeholder {
+        color: $color-gray;
+      }
+      &:hover::placeholder,
+      &:focus::placeholder {
+        color: #8c9bab;
+      }
+
       &:hover,
       &:focus {
         border-color: rgba(255, 255, 255, 0.15);
         border-bottom-color: $color-white;
-        outline: none;
         background-color: rgba(255, 255, 255, 0.15);
       }
     }
   }
+
   .btn--primary {
     width: 100%;
 
@@ -64,7 +71,7 @@
     &:hover,
     &:focus {
       border-color: $color-white;
-      background-color: $color-highlight;
+      background-color: $color-accent;
     }
   }
 }

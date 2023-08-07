@@ -84,10 +84,25 @@ h3 {
 p {
   color: $color-gray;
 }
-::placeholder {
-  color: rgba(255, 255, 255, 0.25);
-}
 
 img {
   border-style: none;
+}
+button,
+input {
+  overflow: visible;
+}
+input:focus {
+  outline: none;
+}
+button,
+input,
+optgroup,
+select,
+textarea {
+  margin: 0;
+
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
 }
