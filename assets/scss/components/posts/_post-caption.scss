@@ -1,0 +1,20 @@
+@use "../../presets" as *;
+@use "../../mixins" as *;
+
+.post-item__caption {
+  display: grid;
+  align-content: center;
+
+  padding: $gap;
+
+  &--title {
+    transition: color 0.5s;
+    text-align: center;
+
+    font-family: "Roboto Slab", serif;
+  }
+  &--subtitle {
+    transition: color 0.5s;
+    text-align: center;
+  }
+}

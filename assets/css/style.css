@@ -242,18 +242,6 @@ input:focus {
   outline: none;
 }
 
-button,
-input,
-optgroup,
-select,
-textarea {
-  margin: 0;
-
-  font-family: inherit;
-  font-size: 100%;
-  line-height: 1.15;
-}
-
 .btn {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -513,6 +501,8 @@ textarea {
   left: 0;
 
   margin: 0;
+
+  letter-spacing: 0.1em;
 }
 .skill-item__link {
   display: -webkit-box;
@@ -530,11 +520,6 @@ textarea {
 
   -webkit-transition: color 0.5s;
           transition: color 0.5s;
-  letter-spacing: 0.1em;
-
-  color: #ffffff;
-
-  font-size: 1.25rem;
 }
 .skill-item__image {
   position: absolute;
@@ -631,15 +616,18 @@ textarea {
   position: relative;
   z-index: 1;
 }
-.about h2 {
+.about__content--title {
   margin-top: 0;
 }
-.about p:first-of-type {
+.about__content--title span {
+  display: block;
+}
+.about__content--subtitle:first-of-type {
   position: relative;
 
   margin-top: -5px;
 }
-.about p:first-of-type::after {
+.about__content--subtitle:first-of-type::after {
   position: absolute;
   top: 0;
 
@@ -650,7 +638,7 @@ textarea {
 
   background-color: rgba(45, 54, 81, 0.1);
 }
-.about p:last-of-type {
+.about__content--subtitle:last-of-type {
   margin: 0;
 }
 .about__image {
@@ -752,6 +740,7 @@ textarea {
 }
 .form .btn--primary {
   width: 100%;
+  min-width: auto;
 
   color: #ffffff;
   border-color: rgba(255, 255, 255, 0);
@@ -763,7 +752,7 @@ textarea {
   border-color: #ffffff;
   background-color: #d66926;
 }
-.posts h2 {
+.posts__title {
   margin-top: 0;
 }
 .posts__grid {
@@ -836,6 +825,7 @@ textarea {
   -o-object-fit: cover;
      object-fit: cover;
 }
+
 .post-item__caption {
   display: grid;
   -ms-flex-line-pack: center;
@@ -843,14 +833,14 @@ textarea {
 
   padding: 20px;
 }
-.post-item__caption h3 {
+.post-item__caption--title {
   -webkit-transition: color 0.5s;
           transition: color 0.5s;
   text-align: center;
 
   font-family: "Roboto Slab", serif;
 }
-.post-item__caption p {
+.post-item__caption--subtitle {
   -webkit-transition: color 0.5s;
           transition: color 0.5s;
   text-align: center;
@@ -906,6 +896,9 @@ textarea {
   content: "";
 
   background-color: rgba(255, 255, 255, 0.1);
+}
+.footer__copy span {
+  display: block;
 }
 .footer__copy span:nth-of-type(1) {
   margin-right: -0.5em;
@@ -1013,10 +1006,10 @@ textarea {
     gap: 100px;
     grid-template-columns: 1fr 271px;
   }
-  .about p {
+  .about__content--subtitle {
     font-size: 1.125rem;
   }
-  .about p:first-of-type::after {
+  .about__content--subtitle:first-of-type::after {
     right: -50px;
   }
   .posts {
@@ -1055,7 +1048,7 @@ textarea {
     gap: 40px;
     grid-template-columns: 1fr 271px;
   }
-  .about p:first-of-type::after {
+  .about__content--subtitle:first-of-type::after {
     right: -20px;
   }
   .posts {
@@ -1131,7 +1124,7 @@ textarea {
     gap: 20px;
     grid-template-columns: 1fr 236px;
   }
-  .about p:first-of-type::after {
+  .about__content--subtitle:first-of-type::after {
     right: -10px;
   }
   .form__container {
@@ -1181,7 +1174,7 @@ textarea {
     gap: 20px;
     grid-template-columns: 1fr;
   }
-  .about p:first-of-type::after {
+  .about__content--subtitle:first-of-type::after {
     visibility: hidden;
   }
   .posts__grid {

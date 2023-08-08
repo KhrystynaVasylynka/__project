@@ -43,48 +43,52 @@
   &__content {
     position: relative;
     z-index: 1;
-  }
-  h2 {
-    margin-top: 0;
-  }
 
-  p {
-    @include lg-min {
-      font-size: 1.125rem;
-    }
-
-    &:first-of-type {
-      position: relative;
-
-      margin-top: -5px;
-      &::after {
-        position: absolute;
-        top: 0;
-
-        width: 2px;
-        height: 200px;
-
-        content: "";
-
-        background-color: rgba($color-primary, 0.1);
-
-        @include lg-min {
-          right: -50px;
-        }
-        @include lg-md {
-          right: -20px;
-        }
-        @include md-sm {
-          right: -10px;
-        }
-        @include sm {
-          visibility: hidden;
-        }
+    &--title {
+      margin-top: 0;
+      & span {
+        display: block;
       }
     }
 
-    &:last-of-type {
-      margin: 0;
+    &--subtitle {
+      @include lg-min {
+        font-size: 1.125rem;
+      }
+
+      &:first-of-type {
+        position: relative;
+
+        margin-top: -5px;
+        &::after {
+          position: absolute;
+          top: 0;
+
+          width: 2px;
+          height: 200px;
+
+          content: "";
+
+          background-color: rgba($color-primary, 0.1);
+
+          @include lg-min {
+            right: -50px;
+          }
+          @include lg-md {
+            right: -20px;
+          }
+          @include md-sm {
+            right: -10px;
+          }
+          @include sm {
+            visibility: hidden;
+          }
+        }
+      }
+
+      &:last-of-type {
+        margin: 0;
+      }
     }
   }
 
